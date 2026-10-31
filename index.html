@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Ashley Wu - 3D computer vision, Gaussian splatting, and AR/VR research." />
+    <title>Ashley Wu</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header page-width">
+      <a class="name" href="#top">Ashley Wu</a>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#publications">Publications</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="intro page-width">
+        <p class="label">Stanford University</p>
+        <h1>3D Computer Vision and AR/VR Researcher</h1>
+        <p class="intro-text">
+          Research interests: 3D Computer Vision, 3D Scene Reconstruction,
+          Gaussian Splatting, Novel View Synthesis, and AR/VR.
+        </p>
+        <div class="links">
+          <a href="mailto:wyx@stanford.edu">Email</a>
+          <a href="https://www.linkedin.com/in/yuxuan-wu-581243292" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="assets/Resume_AshleyWu.pdf" target="_blank">Resume</a>
+        </div>
+      </section>
+
+      <section class="section page-width" id="about">
+        <h2>About</h2>
+        <div class="about-grid">
+          <div>
+            <h3>Education</h3>
+            <div class="education-item">
+              <strong>Stanford University</strong>
+              <p>Ph.D. Candidate in Bioengineering, Minor in Computer Science</p>
+              <p>M.S. in Electrical Engineering</p>
+            </div>
+            <div class="education-item">
+              <strong>Tsinghua University</strong>
+              <p>B.Eng. in Biomedical Engineering</p>
+            </div>
+          </div>
+          <div>
+            <h3>Technical Skills</h3>
+            <dl class="skills">
+              <div><dt>Programming</dt><dd>Python, C/C++, C#, MATLAB, JavaScript</dd></div>
+              <div><dt>Computer Vision</dt><dd>PyTorch, OpenCV, Open3D, scikit-learn, NumPy/SciPy</dd></div>
+              <div><dt>3D and XR</dt><dd>Unity, OpenXR, Mixed Reality Toolkit, GLSL</dd></div>
+              <div><dt>Tools</dt><dd>Linux, Git/GitHub, Docker, ROS 2, Jupyter, Apache Spark</dd></div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <section class="section page-width" id="projects">
+        <h2>Projects</h2>
+
+        <article class="project project-landscape">
+          <img class="project-image" src="assets/LargeOffset.png" alt="Baseline and OffTrackGS comparison across four large camera-view offsets" />
+          <div class="project-content">
+            <p class="project-meta">Stanford University · Feb. 2026 - Present</p>
+            <h3>Free-Viewpoint 4D Gaussian Splatting for Dynamic Surgical Scene Reconstruction</h3>
+            <p class="mentor">Mentor: Prof. Bruce L. Daniel</p>
+            <ul>
+              <li>Developed OffTrackGS, a 4D Gaussian Splatting framework for reconstructing dynamic surgical scenes from endoscopic video and rendering novel views beyond the recorded camera trajectory.</li>
+              <li>Designed Geometry-Constrained Sideview Regularization and introduced Round-Trip View Consistency for ground-truth-free evaluation at unobserved viewpoints.</li>
+              <li>Achieved more complete and visually coherent side-view reconstructions, with statistically significant improvements across a range of viewing-angle offsets.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="project project-portrait">
+          <img class="project-image" src="assets/Breast.png" alt="Augmented reality guidance system used during a surgical procedure" />
+          <div class="project-content">
+            <p class="project-meta">Stanford University · Jan. 2025 - Present</p>
+            <h3>State Estimation-Powered Augmented Reality Guidance for Breast-Conserving Surgery</h3>
+            <p class="mentor">Mentors: Prof. Bruce L. Daniel, Prof. Brian Hargreaves, Prof. Jacqueline Tsai</p>
+            <ul>
+              <li>Developed a real-time AR guidance system using radar-based distance measurements to register preoperative 3D models with deformable patient anatomy.</li>
+              <li>Designed a particle filter-based state estimation method that reduced deformation-induced misalignment from 15 mm to 3 mm in experimental evaluation.</li>
+              <li>Evaluated the prototype with clinical experts, demonstrating localization accuracy comparable to human expert performance in a pilot study.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="project project-square">
+          <img class="project-image" src="assets/Hand.png" alt="RGB, depth, and segmentation mask results for hand understanding" />
+          <div class="project-content">
+            <p class="project-meta">Stanford University · Apr. 2024 - Jun. 2024</p>
+            <h3>Joint Hand Segmentation and Depth Estimation from Monocular Video</h3>
+            <p class="mentor">Deep Learning for Computer Vision Final Project</p>
+            <ul>
+              <li>Proposed a unified architecture with a shared encoder and task-specific deconvolutional decoders for joint hand segmentation and depth estimation.</li>
+              <li>Trained the model with VGG-based initialization and combined segmentation and depth losses.</li>
+              <li>Improved depth estimation accuracy to 0.82 from a 0.67 baseline while maintaining a segmentation F1 score of 0.91.</li>
+            </ul>
+          </div>
+        </article>
+      </section>
+
+      <section class="section page-width" id="publications">
+        <h2>Selected Publications</h2>
+        <ol class="publication-list">
+          <li><strong>Y. Wu</strong>, et al. “OffTrackGS: Geometry-Constrained Regularization and Ground-Truth-Free Evaluation for Free-Viewpoint Endoscopic Reconstruction.” <em>IEEE Transactions on Visualization and Computer Graphics</em>. Under review.</li>
+          <li>T. El Chemaly, ..., <strong>Y. Wu</strong>, et al. “Seeing Through the Surface: Evaluating Visualization Techniques for Depth Perception in Augmented Microscopy.” <em>IEEE Transactions on Visualization and Computer Graphics</em>. Accepted.</li>
+          <li><strong>Y. Wu</strong> and B. Daniel. “Optimizing Projector Pose Estimation for Selective Lighting in Optical See-Through Mixed Reality Systems.” <em>2024 IEEE International Symposium on Mixed and Augmented Reality Adjunct</em>, 2024.</li>
+        </ol>
+      </section>
+
+    </main>
+
+    <footer class="page-width">
+      <span>Ashley Wu</span>
+      <a href="mailto:wyx@stanford.edu">wyx@stanford.edu</a>
+    </footer>
+  </body>
+</html>
