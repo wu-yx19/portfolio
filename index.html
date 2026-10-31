@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Ashley Wu - 3D computer vision, Gaussian splatting, and AR/VR research." />
+    <meta name="description" content="Ashley Wu - augmented reality, computer vision, image guidance, and surgical navigation research." />
     <title>Ashley Wu</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -14,21 +14,27 @@
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#publications">Publications</a>
+        <a href="#recognition">Presentations &amp; Honors</a>
       </nav>
     </header>
 
     <main id="top">
       <section class="intro page-width">
-        <p class="label">Stanford University</p>
-        <h1>3D Computer Vision and AR/VR Researcher</h1>
-        <p class="intro-text">
-          Research interests: 3D Computer Vision, 3D Scene Reconstruction,
-          Gaussian Splatting, Novel View Synthesis, and AR/VR.
-        </p>
-        <div class="links">
-          <a href="mailto:wyx@stanford.edu">Email</a>
-          <a href="https://www.linkedin.com/in/yuxuan-wu-581243292" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a href="assets/Resume_AshleyWu.pdf" target="_blank">Resume</a>
+        <div class="intro-grid">
+          <div class="intro-copy">
+            <p class="label">Stanford University</p>
+            <h1>Augmented Reality and Computer Vision Researcher</h1>
+            <p class="intro-text">
+              Research interests: 3D Computer Vision, 3D Scene Reconstruction,
+              Gaussian Splatting, Novel View Synthesis, and AR/VR.
+            </p>
+            <div class="links">
+              <a href="mailto:wyx@stanford.edu">Email</a>
+              <a href="https://www.linkedin.com/in/yuxuan-wu-581243292" target="_blank" rel="noreferrer">LinkedIn</a>
+              <a href="assets/Resume_AshleyWu.pdf" target="_blank">Resume</a>
+            </div>
+          </div>
+          <img class="headshot" src="assets/YuxuanWu_Headshot.JPG" alt="Portrait of Ashley Wu" />
         </div>
       </section>
 
@@ -50,17 +56,17 @@
           <div>
             <h3>Technical Skills</h3>
             <dl class="skills">
-              <div><dt>Programming</dt><dd>Python, C/C++, C#, MATLAB, JavaScript</dd></div>
-              <div><dt>Computer Vision</dt><dd>PyTorch, OpenCV, Open3D, scikit-learn, NumPy/SciPy</dd></div>
-              <div><dt>3D and XR</dt><dd>Unity, OpenXR, Mixed Reality Toolkit, GLSL</dd></div>
-              <div><dt>Tools</dt><dd>Linux, Git/GitHub, Docker, ROS 2, Jupyter, Apache Spark</dd></div>
+              <div><dt>Programming</dt><dd>Python, C/C++, C#, MATLAB, R, JavaScript</dd></div>
+              <div><dt>Augmented Reality</dt><dd>Unity, OpenXR, Mixed Reality Toolkit, GLSL shader programming</dd></div>
+              <div><dt>Data and ML</dt><dd>Statistical analysis, PyTorch, scikit-learn, SciPy, Pandas, Spark</dd></div>
+              <div><dt>Research Tools</dt><dd>Git/GitHub, Jupyter, Linux, Docker, CAD (SolidWorks), ROS 2, Arduino</dd></div>
             </dl>
           </div>
         </div>
       </section>
 
       <section class="section page-width" id="projects">
-        <h2>Projects</h2>
+        <h2>Featured Projects</h2>
 
         <article class="project project-landscape">
           <img class="project-image" src="assets/LargeOffset.png" alt="Baseline and OffTrackGS comparison across four large camera-view offsets" />
@@ -70,7 +76,8 @@
             <p class="mentor">Mentor: Prof. Bruce L. Daniel</p>
             <ul>
               <li>Developed OffTrackGS, a 4D Gaussian Splatting framework for reconstructing dynamic surgical scenes from endoscopic video and rendering novel views beyond the recorded camera trajectory.</li>
-              <li>Designed Geometry-Constrained Sideview Regularization and introduced Round-Trip View Consistency for ground-truth-free evaluation at unobserved viewpoints.</li>
+              <li>Integrated Grounding DINO and the Segment Anything Model to detect and segment surgical instruments and remove tool occlusions during reconstruction.</li>
+              <li>Designed Geometry-Constrained Sideview Regularization to improve off-trajectory reconstruction quality, and introduced Round-Trip View Consistency for ground-truth-free evaluation at unobserved viewpoints.</li>
               <li>Achieved more complete and visually coherent side-view reconstructions, with statistically significant improvements across a range of viewing-angle offsets.</li>
             </ul>
           </div>
@@ -80,12 +87,13 @@
           <img class="project-image" src="assets/Breast.png" alt="Augmented reality guidance system used during a surgical procedure" />
           <div class="project-content">
             <p class="project-meta">Stanford University · Jan. 2025 - Present</p>
-            <h3>State Estimation-Powered Augmented Reality Guidance for Breast-Conserving Surgery</h3>
-            <p class="mentor">Mentors: Prof. Bruce L. Daniel, Prof. Brian Hargreaves, Prof. Jacqueline Tsai</p>
+            <h3>State Estimation-Based Augmented Reality Guidance for Breast Surgery</h3>
+            <p class="mentor">Mentors: Prof. Bruce L. Daniel, Prof. Allison Okamura, Prof. Brian Hargreaves, Prof. Jacqueline Tsai</p>
             <ul>
-              <li>Developed a real-time AR guidance system using radar-based distance measurements to register preoperative 3D models with deformable patient anatomy.</li>
-              <li>Designed a particle filter-based state estimation method that reduced deformation-induced misalignment from 15 mm to 3 mm in experimental evaluation.</li>
-              <li>Evaluated the prototype with clinical experts, demonstrating localization accuracy comparable to human expert performance in a pilot study.</li>
+              <li>Developed an AR surgical guidance system integrating preoperative MRI with intra-operative radar-based distance sensing and infrared tool tracking.</li>
+              <li>Applied particle filtering to refine 3D tumor position under soft-tissue deformation, reducing deformation-induced misalignment from 15 mm to 4 mm.</li>
+              <li>Co-designed a clinical workflow and initiated a pilot study with seven patients, with preliminary results suggesting fewer re-excisions with AR guidance.</li>
+              <li>Future work will integrate haptic feedback to complement visual AR guidance and support more intuitive perception of tumor location and boundaries.</li>
             </ul>
           </div>
         </article>
@@ -103,15 +111,113 @@
             </ul>
           </div>
         </article>
+
+        <div class="additional-projects">
+          <h3 class="subsection-title">Additional Research and Projects</h3>
+
+          <article class="text-project">
+            <div class="text-project-heading">
+              <div>
+                <h3>Computer-Assisted Hand Function Assessment for Postoperative Evaluation</h3>
+                <p class="mentor">Mentors: Prof. Bruce L. Daniel, Dr. Christoph Leuze</p>
+              </div>
+              <p class="project-meta">Stanford University · Nov. 2025 - Jul. 2026</p>
+            </div>
+            <ul>
+              <li>Developed software to automate quantitative measurement of finger, radial, and volar abduction after hand surgery.</li>
+              <li>Integrated a stereo vision-based hand-tracking camera for real-time capture and analysis of fine-grained hand movements.</li>
+              <li>Validated the system with eight participants, demonstrating accuracy comparable to human experts and improved repeatability.</li>
+            </ul>
+          </article>
+
+          <article class="text-project">
+            <div class="text-project-heading">
+              <div>
+                <h3>Selective Lighting System for Enhancing Visual Perception in AR</h3>
+                <p class="mentor">Mentor: Prof. Bruce L. Daniel, Department of Radiology</p>
+              </div>
+              <p class="project-meta">Stanford University · Apr. 2024 - Dec. 2024</p>
+            </div>
+            <ul>
+              <li>Introduced projector-based selective lighting to enhance depth perception and interaction in optical see-through AR.</li>
+              <li>Developed a Perspective-n-Point projector pose estimation method that achieved a 5x accuracy improvement over conventional marker-based methods.</li>
+              <li>Implemented real-time headset-to-projector control using WebSocket and UDP, with custom shaders for targeted visualization effects.</li>
+            </ul>
+          </article>
+
+          <article class="text-project">
+            <div class="text-project-heading">
+              <div>
+                <h3>Microcontroller-Based Precision Vibration Actuation and Testing System</h3>
+                <p class="mentor">Mentor: Prof. Xiaochuan Dai, Department of Biomedical Engineering</p>
+              </div>
+              <p class="project-meta">Tsinghua University · Feb. 2022 - Jun. 2022</p>
+            </div>
+            <ul>
+              <li>Designed and built a precision vibration testing system for characterizing flexible electrodes under controlled mechanical excitation.</li>
+              <li>Developed an Arduino-based motor-control pipeline for programmable sinusoidal displacement from 10 µm to 500 µm.</li>
+              <li>Validated actuator frequency with audio spectral analysis and displacement amplitude through microscope video measurements.</li>
+            </ul>
+          </article>
+
+          <article class="text-project">
+            <div class="text-project-heading">
+              <div>
+                <h3>Hardware and System Design for Biomedical Devices</h3>
+                <p class="mentor">Biomedical Detection Theory and Sensor Technology · Biomedical Electronics</p>
+              </div>
+              <p class="project-meta">Tsinghua University · Feb. 2022 - Dec. 2022</p>
+            </div>
+            <ul>
+              <li>Developed a blood pressure monitor and an electrocardiogram device for physiological monitoring.</li>
+              <li>Performed circuit design, simulation, PCB layout, soldering, and assembly for prototyping.</li>
+              <li>Integrated sensors and microcontroller-based data acquisition with real-time signal processing and completed hardware and software testing.</li>
+            </ul>
+          </article>
+        </div>
       </section>
 
       <section class="section page-width" id="publications">
         <h2>Selected Publications</h2>
         <ol class="publication-list">
           <li><strong>Y. Wu</strong>, et al. “OffTrackGS: Geometry-Constrained Regularization and Ground-Truth-Free Evaluation for Free-Viewpoint Endoscopic Reconstruction.” <em>IEEE Transactions on Visualization and Computer Graphics</em>. Under review.</li>
-          <li>T. El Chemaly, ..., <strong>Y. Wu</strong>, et al. “Seeing Through the Surface: Evaluating Visualization Techniques for Depth Perception in Augmented Microscopy.” <em>IEEE Transactions on Visualization and Computer Graphics</em>. Accepted.</li>
           <li><strong>Y. Wu</strong> and B. Daniel. “Optimizing Projector Pose Estimation for Selective Lighting in Optical See-Through Mixed Reality Systems.” <em>2024 IEEE International Symposium on Mixed and Augmented Reality Adjunct</em>, 2024.</li>
+          <li>Y. Yang, M. Guo, <strong>Y. Wu</strong>, et al. “VR MRI Training for Adolescents: A Comparative Study of Gamified VR, Passive VR, 360° Video, and Traditional Educational Video.” <em>2025 IEEE International Symposium on Mixed and Augmented Reality Adjunct</em>, 2025.</li>
+          <li><strong>Y. Wu</strong>, et al. “State Estimation-Powered Augmented Reality Guidance for Breast-Conserving Surgery.” <em>IEEE Transactions on Visualization and Computer Graphics</em>. Under review.</li>
+          <li>T. El Chemaly, ..., <strong>Y. Wu</strong>, et al. “Seeing Through the Surface: Evaluating Visualization Techniques for Depth Perception in Augmented Microscopy.” <em>IEEE Transactions on Visualization and Computer Graphics</em>. Accepted.</li>
+          <li>M. Rydberg, ..., <strong>Y. Wu</strong>, et al. “Comparison of Computer-Vision-Based and Manual Goniometric Hand Motion Assessment: A Proof-of-Concept Study.” <em>Journal of Hand Surgery Global Online</em>. Accepted.</li>
         </ol>
+      </section>
+
+      <section class="section page-width" id="recognition">
+        <h2>Selected Presentations and Honors</h2>
+        <div class="recognition-grid">
+          <div>
+            <h3>Presentations</h3>
+            <ol class="recognition-list">
+              <li>
+                <strong>Seeing the Unseen: MRI-AR Guidance System for Breast-Conserving Surgery</strong>
+                <span>North California AAPM Young Investigators’ Symposium, 2026 · Oral Presentation, Third Place</span>
+              </li>
+              <li>
+                <strong>AR Visualization Powered by State Estimation for Breast-Conserving Surgery and Beyond</strong>
+                <span>Stanford Bio-X Interdisciplinary Initiatives Seed Grants Program, 2025 · Poster Presentation, Second Prize</span>
+              </li>
+              <li>
+                <strong>Optimizing Projector Pose Estimation for Selective Lighting in Optical See-Through Mixed Reality Systems</strong>
+                <span>IEEE International Symposium on Mixed and Augmented Reality, 2024 · Poster Presentation</span>
+              </li>
+            </ol>
+          </div>
+          <div>
+            <h3>Honors</h3>
+            <ul class="recognition-list honors-list">
+              <li><strong>Stanford Interdisciplinary Graduate Fellowship</strong><span>Stanford University · 2026</span></li>
+              <li><strong>Stanford Graduate Fellowship</strong><span>Stanford University · 2023</span></li>
+              <li><strong>Brain-Controlled Robot Competition, First Prize</strong><span>Chinese Institute of Electronics · 2022</span></li>
+            </ul>
+          </div>
+        </div>
       </section>
 
     </main>
